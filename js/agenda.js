@@ -10,8 +10,9 @@ function getRow(person) {
 var contacts = [
     ['Nicolae','Matei'],
     ['Pop','Matei'],
-    ['Andrei' ,'x' ],
-    ['Sebi', 'y' ]
+    ['Andrei' ,'XX' ],
+    ['Sebi', 'YY' ]
+    ['Gina', 'ZZ' ]
 
 
 ];
