@@ -16,7 +16,7 @@ var contacts = [
 
 ];
 
-for (var i = 0; i  <contacts; i++) {
-    var person = contact
+for (var i = 0; i  <contacts.length; i++) {
+    var person = contacts[i];
     $('#agenda tbody').append(getRow(person));
 }
