@@ -1,9 +1,12 @@
 console.debug('loading agenda');
 
 function getRow(person) {
-    var firstName = person.firstName ;
-    var lastName = person.lastName ;
-    var row = '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>075211225</td></tr>';
+    var row = '<tr>'+
+        '<td>' + person.firstName + '</td>'+
+        '<td>'+ person.lastName + '</td>'+
+        '</td>075211225 </td>'+
+        '<td><button data-id="' + person.id+ '">x</button>'+
+         '</tr>';
     return row;
 }
 
@@ -18,7 +21,7 @@ console.debug('2) after ajax');
 
 function showContacts(contacts){
     for (var i = 0; i  <contacts.length; i++) {
-    var person = contacts[i];
-    $('#agenda tbody').append(getRow(person));}
-
+        var person = contacts[i];
+        $('#agenda tbody').append(getRow(person));
+    }
 }
