@@ -7,18 +7,18 @@ function getRow(person) {
     return row;
 }
 
-var contacts = [
+$.ajax({
+    url: "js/mocks/load-contacts.json"
+   }).done(function(result) {
+    console.debug  ('3) ajax done', result) ;
+    showContacts(result);
+});
 
-    {firstName: 'Vlad', lastName: 'Pop'},
-    {firstName: 'Simona', lastName: 'Pop'},
-    {firstName: 'Ionela', lastName: 'Pop'},
-    {firstName: 'Gina', lastName: 'Pop'},
-    {firstName: 'Andra', lastName: 'Pop'},
-    {firstName: 'Ema', lastName: 'Pop'},
+console.debug('2) after ajax');
 
-];
-
-for (var i = 0; i  <contacts.length; i++) {
+function showContacts(contacts){
+    for (var i = 0; i  <contacts.length; i++) {
     var person = contacts[i];
-    $('#agenda tbody').append(getRow(person));
+    $('#agenda tbody').append(getRow(person));}
+
 }
