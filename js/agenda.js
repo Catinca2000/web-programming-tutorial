@@ -4,7 +4,7 @@ function getRow(person) {
     var firstName = person[0];
     var lastName = person[1];
     var row = '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>075211225</td></tr>';
-
+    return row;
 }
 
 var contacts = [
